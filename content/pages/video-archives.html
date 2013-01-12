@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="body" id="content">
+    <h2>Archivo de video</h2>
+
+    <p>En casi todas las reuniones y eventos que realizamos, solemos grabar, tanto audio como video. Aqui veremos de colgar todas esas grabaciones. Todos los archivos están en formato WebM.</p>
+
+    <p>De momento hay poca cantidad, pero poco a poco iremos actualizando la lista.</p>
+
+    <ul class="videolist">
+      <li>10 de Marzo, 2011 - <a class="ready" href="https://s3-eu-west-1.amazonaws.com/niwi-web/video/python-madrid/python-encoding-03-2011.webm">Encoding en python 2</a> por Javi (116Mb)</li>
+      <li>9 de Junio, 2011 - <a href="https://s3-eu-west-1.amazonaws.com/niwi-web/video/python-madrid/python-gis-mapping-09-06-2011.webm">Python GIS/Mapping</a> por Kiko (65Mb)</li>
+      <li>9 de Junio, 2011 - <a>Python GTK</a> por Jesus Espino</li>
+    </ul>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $(".videolist li a[href]").click(function(e) {
+    e.preventDefault();
+    $(".modal video").attr("src", $(this).attr('href'));
+    $(".modal").show();
+    });
+
+    $(".modal .close").click(function(e) {
+    e.preventDefault();
+    console.log(1);
+    $(this).parent().hide();
+    $(this).parent().find("video").attr("src", "");
+    });
+
+    });
+    </script>
+
+    <style type="text/css">
+    div.modal { position: absolute; top: 50px;  right:50px;
+      width: 666px; border:1px solid #888; height: 480px;
+      background-color: white; padding: 10px; display: none;}
+    div.modal div.close { position: absolute; right: 10px; top: 10px; cursor: pointer; }
+    </style>
+
+    <div class="modal">
+      <div class="close">(x)</div>
+      <video controls src="" width="640" height="480" />
+    </div>
+</section>
+
+{% endblock %}
