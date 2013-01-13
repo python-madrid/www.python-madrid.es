@@ -40,3 +40,4 @@ REVERSE_CATEGORY_ORDER = True
 MENUITEMS = (
     ('videos', '/video-archives.html'),
 )
+FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
