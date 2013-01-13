@@ -36,6 +36,9 @@ help:
 	@echo '                                                                       '
 
 
+syncs3:
+	(cd output; s3cmd sync -P . s3://www.python-madrid.es/)
+
 html: clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
 

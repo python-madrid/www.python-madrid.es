@@ -259,6 +259,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 #extras li {border-bottom: 1px solid #fff;}
 #extras h2 {
     color: #C74350;
+    color: #427299;
     font-size: 1.429em;
     margin-bottom: .25em;
     padding: 0 3px;
@@ -272,7 +273,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
     padding: .3em .25em;
 }
 
-#extras a:hover, #extras a:active {color: #fff;}
 
 /* Blogroll */
 #extras .blogroll {
@@ -361,7 +361,12 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #posts-list footer address {display: block;}
 
 /* Blog Index */
-#posts-list {list-style: none; margin: 0; padding: 10px;}
+#posts-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 #posts-list .hentry { position: relative;}
 
 #posts-list footer {

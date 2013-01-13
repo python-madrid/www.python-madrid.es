@@ -9,9 +9,8 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = u'es'
 
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),)
+LINKS =  (('Niwi.be', 'http://www.niwi.be/'),
+          ('Python.org', 'http://python.org'),)
 
 SOCIAL = (
     ('twitter', "http://twitter.com/python_madrid"),
