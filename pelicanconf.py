@@ -39,5 +39,5 @@ DISPLAY_PAGES_ON_MENU = True
 REVERSE_CATEGORY_ORDER = True
 
 MENUITEMS = (
-    ('ARCHIVOS VIDEO', '/video-archives.html'),
+    ('videos', '/video-archives.html'),
 )

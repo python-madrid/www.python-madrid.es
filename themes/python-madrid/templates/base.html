@@ -26,7 +26,9 @@
 <body id="index" class="home">
 {% include 'github.html' %}
         <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+                <a href="{{ SITEURL }}/">
+                    <img src="{{ SITEURL }}/theme/images/logo.png"></img>
+                </a>
                 <nav><ul>
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for page in PAGES %}
@@ -34,7 +36,7 @@
                 {% endfor %}
                 {% endif %}
                 {% for cat, null in categories %}
-                    <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat|upper }}</a></li>
+                    <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                 {% endfor %}
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
