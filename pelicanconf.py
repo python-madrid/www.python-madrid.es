@@ -43,4 +43,15 @@ REVERSE_CATEGORY_ORDER = True
 MENUITEMS = (
     ('videos', '/video-archives.html'),
 )
-FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
+
+
+STATIC_PATHS = [
+    'extra/robots.txt',
+    'files',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+}
+
+LOCALE = "en"
